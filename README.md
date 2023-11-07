@@ -1,2 +1,4 @@
 # PageCache
 PageCache enables you to save web content for offline access, ensuring you can view webpages even without an internet connection
+
+In a world where internet connectivity isn't always guaranteed, accessing critical information can be a challenge. That's where PageCache comes to the rescue. This Python command-line application acts as your virtual library, allowing you to save webpages for seamless offline access. With PageCache, you can effortlessly store copies of web content, ensuring you're never left in the dark when the internet connection falters.
