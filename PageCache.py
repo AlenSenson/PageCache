@@ -1,4 +1,4 @@
-from InquirerPy import inquirer
+from InquirerPy import inquirer, get_style
 from InquirerPy.base.control import Choice
 from InquirerPy.separator import Separator
 from InquirerPy import inquirer
@@ -28,11 +28,22 @@ with open('PCrec.csv', 'r') as csvfile:
         rows.append(row)
 
 
-
+style = get_style(
+    {"question": "bold", 
+     "answer": "bold", 
+     "input": "bold"
+    }, 
+    style_override=False
+    )
 
 
 #mainfunction
 def main():
+    os.system("cls")
+    print("WELCOME TO PAGE CACHE")
+    print("PageCache enables you to save web content for offline access,")
+    print("ensuring you can view webpages even without an internet connection")
+    print("\n\n")
 
     #providing options
     action = inquirer.select(
@@ -43,6 +54,7 @@ def main():
             Separator(),
         ] + [Choice(value= i[0], name=i[1]) for i in rows if i!=[] ],
         default=None,
+        style = style,
     ).execute()
 
     
@@ -79,6 +91,7 @@ def main():
     #exit
     elif action=='exit':
         exit()
+        os.system("cls")
 
 
     #view webpage
